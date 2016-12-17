@@ -14,9 +14,12 @@ function load_home (e) {
    }
    var url = window.location.search.substring(1);
 if (url.length) {
-    xhr.open("GET", window.location.search.substring(1), true);
+    xhr.open("GET", url, true);
     xhr.setRequestHeader('Content-type', 'text/html');
     xhr.send();
+}
+else {
+    xhr = null;
 }
 }
 </script>
