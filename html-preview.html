@@ -12,10 +12,12 @@ function load_home (e) {
     document.close();
     }
    }
-
- xhr.open("GET", window.location.search.substring(1), true);
- xhr.setRequestHeader('Content-type', 'text/html');
- xhr.send();
+   var url = window.location.search.substring(1);
+if (url.length) {
+    xhr.open("GET", window.location.search.substring(1), true);
+    xhr.setRequestHeader('Content-type', 'text/html');
+    xhr.send();
+}
 }
 </script>
 </head>
